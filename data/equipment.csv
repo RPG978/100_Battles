@@ -1,0 +1,91 @@
+id,type,name,base_attack,base_defense,base_health,element,rarity,min_level,max_level,description
+1,weapon,Rusty Sword,5,0,0,none,1,1,10,A worn blade with minimal cutting power.
+2,weapon,Iron Blade,12,0,0,none,2,1,10,Standard issue iron sword.
+3,weapon,Flame Dagger,10,0,0,fire,2,1,10,A dagger imbued with minor fire energy.
+4,weapon,Thunder Axe,18,0,0,lightning,2,5,20,A heavy axe crackling with electricity.
+5,weapon,Frost Greatsword,22,0,0,ice,2,5,20,A massive blade that chills the air.
+6,armor,Cloth Tunic,0,4,0,none,1,1,10,Simple cloth armor offering minimal protection.
+7,armor,Leather Vest,0,9,0,none,1,1,10,Sturdy leather armor favored by scouts.
+8,armor,Iron Plate,0,16,0,none,2,5,20,Heavy iron armor for frontline fighters.
+9,armor,Fireguard Armor,0,14,0,fire,2,5,20,Armor resistant to fire damage.
+10,armor,Glacial Mail,0,20,0,ice,2,5,20,Armor forged in frozen caverns.
+11,accessory,Wooden Charm,0,3,10,earth,1,1,10,A simple charm that boosts vitality.
+12,accessory,Agile Band,1,1,10,none,1,1,10,Increases agility and reaction speed.
+13,accessory,Flame Ring,0,0,30,fire,2,5,10,A ring that enhances fire affinity.
+14,accessory,Storm Pendant,0,0,30,lightning,2,5,20,A pendant humming with static energy.
+15,accessory,Frost Amulet,0,0,30,ice,2,5,20,An amulet that strengthens ice abilities.
+16,weapon,Kendo Shinai,3,3,3,none,1,1,10,A stick for practicing Kendo.
+17,weapon,Heavy Oar,3,5,0,none,1,1,10,An oar from a standard row boat.
+18,weapon,Practice Wand,2,3,10,none,1,1,10,A sliver of elm ment to be a magic conduit.
+19,weapon,Nail Bat,5,7,0,none,1,1,10,A baseball bat with a single protruding nail.
+20,weapon,Shillelagh,7,6,10,earth,2,5,20,A club left behind by druids of old.
+21,armor,Peasants Cloths,0,2,0,none,1,1,10,Tattered cloths for working in the field.
+22,armor,Fancy Garbs,0,3,10,none,2,1,10,Noble person's dressware.
+23,armor,Moldy Gambeson,0,7,0,earth,2,1,10,Well-used padded armor with a powerful odor.
+24,armor,Scale Armor,0,15,0,water,2,5,20,Lightweight armor made from the scales of a large fish.
+25,armor,Laboratory Coat,0,2,20,poison,2,5,20,A long jacket meant to ward off toxic chemicals.
+26,accessory,Snorkle,0,0,10,water,1,1,10,A mask and piece of bamboo meant to help breathe underwater.
+27,accessory,Health Band,0,0,30,poison,2,5,20,A wrist band indicating you are a patient of good health.
+28,accessory,Crown of Thorns,2,3,30,earth,2,5,20,A crown made of petrified thistles.
+29,accessory,Power Wrist,5,0,10,none,2,1,10,A wristband for training.
+30,accessory,Sweatband,0,5,10,none,2,1,10,A sweatband for training.
+31,weapon,Bone Knife,16,0,0,poison,2,5,10,A dagger carved from the bones of a poisonous creature.
+32,weapon,Buster Sword,20,5,10,none,2,5,20,An unwieldy weapon that looks sweet when you triple combo.
+33,weapon,Mage Staff,10,10,40,none,2,5,20,A stave carved from an ancient oak.
+34,weapon,Pike,15,10,10,none,2,5,20,A weapon carried by the town guard.
+35,weapon,Enchanted Bagpipes,10,20,50,none,3,10,30,Bagpipes enhanced by a magical aura.
+36,armor,Static Pelt,0,13,10,lightning,2,5,20,A skin made of Thunder Squirrel
+37,armor,Hauberk,0,20,0,none,2,5,20,A nicely woven and light chain mail.
+38,armor,Wool Sweater,0,5,0,none,1,1,10,A nice sweater that reminds you of home.
+39,armor,Burlap Sack,0,2,0,none,1,1,10,We can't all afford nice things.
+40,armor,Giant Tortoise Carapace,0,35,0,none,3,10,30,Armor crafted from the shell of a long lived tortoise.
+41,accessory,Chain Necklace,0,0,10,none,1,1,10,A pretty standard necklace chain.
+42,accessory,Rabbits Foot,0,2,10,none,1,1,10,Some people say it brings good luck.
+43,accessory,Power Glove,10,0,0,none,2,5,20,It's soooo bad…
+44,accessory,Cool Shades,0,0,30,none,2,5,20,Don't wear at night.
+45,accessory,White Cape,0,0,60,none,3,10,30,Some may mistake you for a super hero.
+46,weapon,Flametounge ,35,0,0,fire,4,15,40,A longsword imbued with Ifrit's rage.
+47,weapon,Sub-Zero Shurikens,35,0,0,ice,4,15,40,Shurikens that seem to shiver themselves.
+48,weapon,Gavel of the Wood,35,0,0,earth,4,15,40,A warhammer with the weight of a tree.
+49,weapon,Riptide Sickles,35,0,0,water,4,15,40,A pair of sickles that can split a raging river.
+50,weapon,Thunder Bombs,35,0,0,lightning,4,15,40,Heavy bombs that explode with arching lightning.
+51,armor,Shell of the Fire Dragon,0,50,0,fire,4,15,40,Armor crafted from the hide of a fire dragon.
+52,armor,Shell of the Ice Dragon,0,50,0,ice,4,15,40,Armor crafted from the hide of an ice dragon.
+53,armor,Shell of the Earth Dragon,0,50,0,earth,4,15,40,Armor crafted from the hide of an earth dragon.
+54,armor,Shell of the Sea Dragon,0,50,0,water,4,15,40,Armor crafted from the hide of a water dragon.
+55,armor,Shell of the Sky Dragon,0,50,0,lightning,4,15,40,Armor crafted from the hide of a lightning dragon.
+56,accessory,Fire Crown,0,0,100,fire,4,15,40,A crown pulsating with fire.
+57,accessory,Ice Crown,0,0,100,ice,4,15,40,A crown pulsating with frost.
+58,accessory,Earth Crown,0,0,100,earth,4,15,40,A crown pulsating with vigor.
+59,accessory,Water Crown,0,0,100,water,4,15,40,A crown pulsating with fury.
+60,accessory,Lightning Crown,0,0,100,lightning,4,15,40,A crown pulsating with lightning.
+61,weapon,Legendary Kunai,25,10,20,none,3,10,30,Dropped by an honorable Hokage.
+62,weapon,Heafty Gemmed Axe,30,0,10,none,3,10,30,An axe perhaps not as sharp as it is heavy.
+63,weapon,Long Ranged Harpoon,25,5,30,none,3,10,30,A harpoon that can cover twice the distance of an average spear.
+64,weapon,Indestructable Caltrops,5,30,0,none,3,10,30,Nails used to slow an approaching enemy.
+65,weapon,Corporeal Benediction,40,0,100,poison,5,20,50,A rotten-looking scythe that is lighter than it appears.
+66,armor,Bone Cage,0,30,15,poison,3,10,30,Armor made from the tempered bones of a dead dragon.
+67,armor,Brigandine,0,30,0,none,3,10,30,Leather protection with scattered metal plates.
+68,armor,Plackart,0,25,10,none,3,10,30,A plate for belly protection.
+69,armor,Cuirass,5,30,0,none,3,10,30,A heavy shell made for intense battle.
+70,armor,Splint Mail,5,25,10,none,3,10,30,A lighter battle armor that boosts morale.
+71,accessory,Hearty Pendant,0,0,100,none,3,10,30,Fine jewlery that seems to have a life of it's own.
+72,accessory,Cunning Buckle,10,5,75,none,3,10,30,A belt buckle that emanates a battle beat.
+73,accessory,Magic Earrings,5,10,75,none,3,10,30,Enchanted bobbles that dangle from your ears.
+74,accessory,Platinum Bangle,15,0,75,none,3,10,30,An arm plate crafted by elder dwarves enscribed with battle signs.
+75,accessory,Vintage Timepiece,0,15,75,none,3,10,30,An antique treasure lovingly tended to throughout the years.
+76,weapon,Shindo's Exploding Dagger,25,25,20,"fire, poison",4,15,40,An ancient wight had a propensody toward pyrotechnics while forging this steel.
+77,weapon,Lieutenant's Anger Bow,30,0,30,none,4,15,40,An angry bow complete with fury arrows.
+78,weapon,Locke's Lucky Day,0,0,300,none,8,10,30,A deck of cards that seems to have more hearts than spades.
+79,weapon,1000 Needles,100,0,0,poison,10,10,50,A gift from a wandering cactuar.
+80,weapon,Earth Breaker,60,0,0,Earth,5,20,50,A whip that is said to be the favorite toy of an earth titan.
+81,armor,The Hu's Wineskin,0,80,200,none,10,10,50,A wineskin filled with what can only be described as the most perfect wine.
+82,armor,Skulldivers Deep,25,25,20,"water, poison",4,15,40,Russet armor that possesses your movement.
+83,armor,Reactive Body Armor,0,60,0,none,4,15,40,Body armor that seems to block for you.
+84,armor,The Barbed Coffin,20,60,0,none,5,20,50,A heavy set of ancient armor surrounded in sharp barbs.
+85,armor,Hesitence Direct,0,60,100,earth,5,20,50,A tunic made of enchanted reeds.
+86,accessory,The Secret Flute,0,100,0,none,10,10,50,Perhaps your defense could use a good dance?
+87,accessory,Tiara of Life,0,0,500,none,10,10,50,A glowing tiara encrusted with the gems of life.
+88,accessory,Regal Cuffs,10,30,70,none,4,15,40,Wrist gaurds of a fallen king.
+89,accessory,Eliby's Doll,0,15,80,none,4,15,40,A haunted doll belonging to the daughter of a world renowned knight.
+90,accessory,Enhancement Pellet,30,30,30,none,5,20,50,A small pouch of pellets that provide great vigor when eaten.

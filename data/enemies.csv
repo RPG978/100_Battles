@@ -1,0 +1,21 @@
+id,name,base_health,base_attack,base_defense,attack_element,defense_element,counter_element,rarity,min_level,max_level
+1,Ice Bat,180,30,15,Water,Water,Water,1,1,40
+2,Poisonous Snake,185,35,15,Poison,Poison,Poison,1,1,40
+3,Fire Mouse,170,30,15,Fire,Fire,Fire,1,1,40
+4,Slime,300,10,60,NULL,NULL,NULL,1,1,40
+5,Dangerous Insect,150,20,10,Poison,Poison,Poison,1,1,40
+6,Killer Bee,150,35,5,NULL,NULL,Poison,1,1,40
+7,Thunder Cat,200,35,20,Lightning,Lightning,Lightning,1,1,40
+8,Dog Golem,230,45,15,Earth,Earth,Earth,1,1,40
+9,Fast Bird,170,30,15,NULL,NULL,NULL,1,1,40
+10,Spiked Lizard,170,20,10,NULL,NULL,Poison,1,1,40
+11,Plague Pest,160,20,25,NULL,NULL,Poison,1,1,40
+12,Poisonous Spider,160,35,10,Poison,Poison,Poison,1,1,40
+13,Reel Big Fish,190,20,20,Water,Water,Water,1,1,40
+14,Big Rat,180,30,10,NULL,NULL,NULL,1,1,40
+15,Bloated Sheep,260,30,20,NULL,NULL,NULL,1,1,40
+16,Goat,220,45,15,NULL,NULL,NULL,1,1,40
+17,Dirty Pig,220,30,15,NULL,Earth,NULL,1,1,40
+18,Thunder Squirrel,170,30,15,Lightning,Lightning,Lightning,1,1,40
+19,Hot Raccoon,210,30,15,NULL,Fire,Fire,1,1,40
+20,Wet Deer,220,20,15,NULL,Water,NULL,1,1,40
