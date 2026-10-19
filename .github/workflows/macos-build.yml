@@ -1,0 +1,24 @@
+name: macOS Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: |
+          brew update
+          brew install sdl2
+
+      - name: Configure CMake
+        run: cmake -B build
+
+      - name: Build Project
+        run: cmake --build build --config Release
