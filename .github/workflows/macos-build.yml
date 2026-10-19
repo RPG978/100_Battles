@@ -22,3 +22,7 @@ jobs:
 
       - name: Build Project
         run: cmake --build build --config Release
+
+      - name: List Build Output
+        run: |
+          find build -type f
