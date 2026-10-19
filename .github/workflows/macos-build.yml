@@ -23,6 +23,8 @@ jobs:
       - name: Build Project
         run: cmake --build build --config Release
 
-      - name: Find game executable
-        run: |
-          find build -name game_main
+      - name: Upload macOS Executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-game-main
+          path: build/game_main
