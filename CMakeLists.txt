@@ -35,6 +35,8 @@ add_library(game
     src/ui/ConfirmCharacterUI.cpp
     src/ui/ChooseBattleCountUI.cpp
     src/ui/CampUI.cpp
+    src/ui/CharacterOverviewUI.cpp
+    src/ui/DeathSummaryUI.cpp
     src/ui/LoggingTestShim.cpp
 )
 
