@@ -23,8 +23,14 @@ jobs:
       - name: Build Project
         run: cmake --build build --config Release
 
-      - name: Upload macOS Executable
+      - name: Package Game
+        run: |
+          mkdir package
+          cp build/game_main package/
+          cp -R data package/
+
+      - name: Upload Game Package
         uses: actions/upload-artifact@v4
         with:
-          name: macos-game-main
-          path: build/game_main
+          name: macos-game-package
+          path: package
