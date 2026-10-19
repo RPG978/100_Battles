@@ -23,6 +23,6 @@ jobs:
       - name: Build Project
         run: cmake --build build --config Release
 
-      - name: List Build Output
+      - name: Find game executable
         run: |
-          find build -type f
+          find build -name game_main
