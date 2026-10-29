@@ -45,7 +45,7 @@ bool ImGuiLayer::init()
 
     // Initialize ImGui backends
     ImGui_ImplSDL2_InitForOpenGL(window, glContext);
-    ImGui_ImplOpenGL3_Init("#version 130");
+    ImGui_ImplOpenGL3_Init("#version 150");
 
     return true;
 }
