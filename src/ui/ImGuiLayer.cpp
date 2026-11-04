@@ -10,6 +10,8 @@
 
 bool ImGuiLayer::init()
 {
+    std::cout << "UI Step Initialize SDL\n";
+
     // Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0)
         return false;
