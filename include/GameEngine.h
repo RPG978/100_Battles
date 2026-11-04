@@ -12,6 +12,7 @@
 #include "ui/UIState.h"
 #include <map>
 #include <optional>
+#include <memory>
 
 enum class GameState {
     MainMenu,
