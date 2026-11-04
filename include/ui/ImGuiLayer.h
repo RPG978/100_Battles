@@ -10,7 +10,7 @@ public:
     bool init();
 
     // Begin a new ImGui frame (call once per loop)
-    void beginFrame();
+    bool beginFrame();
 
     // Render ImGui and swap buffers (call once per loop)
     void endFrame();

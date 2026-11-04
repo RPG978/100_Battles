@@ -1,3 +1,4 @@
+#define SDL_MAIN_HANDLED
 #include "Enemy.h"
 #include "DatabaseManager.h"
 #include "GameEngine.h"
@@ -9,9 +10,13 @@
 #include <iostream>
 #include <ctime>
 
+#include <filesystem>
+#include <windows.h>
+
 int main()
 {
     try {
+        
         // Seeds random number generator
         srand(static_cast<unsigned>(time(nullptr)));
 
@@ -32,13 +37,16 @@ int main()
         while (engine->isRunning())
         {
             // Starts new ImGui frame
-            ui.beginFrame();
+            if (!ui.beginFrame()) {
+                break;
+            }
             // Chooses an draws UI panels
             router.draw(*engine, uiState);
             // Per-frame game logic
             engine->update();
             // Renders UI
             ui.endFrame();
+            
         }
 
         // Shut everything down cleanly

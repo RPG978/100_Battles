@@ -6,6 +6,7 @@
 // ImGui backends
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl3.h"
+#include <iostream>
 
 bool ImGuiLayer::init()
 {
@@ -50,7 +51,7 @@ bool ImGuiLayer::init()
     return true;
 }
 
-void ImGuiLayer::beginFrame()
+bool ImGuiLayer::beginFrame()
 {
     // Poll SDL events
     SDL_Event event;
@@ -59,7 +60,8 @@ void ImGuiLayer::beginFrame()
         ImGui_ImplSDL2_ProcessEvent(&event);
         if (event.type == SDL_QUIT)
         {
-            // handle quit here
+            std::cout << "QUIT RECEIVED\n";
+            return false;
         }
     }
 
@@ -67,6 +69,8 @@ void ImGuiLayer::beginFrame()
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplSDL2_NewFrame();
     ImGui::NewFrame();
+
+    return true;
 }
 
 void ImGuiLayer::endFrame()
