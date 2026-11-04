@@ -14,7 +14,12 @@ bool ImGuiLayer::init()
 
     // Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0)
+    {
+        std::cout << "SDL_Init failed: "
+            << SDL_GetError()
+            << std::endl;
         return false;
+    }
 
     std::cout << "UI Step Initialize SDL\n";
 
