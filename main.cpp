@@ -11,7 +11,6 @@
 #include <ctime>
 
 #include <filesystem>
-#include <windows.h>
 
 int main()
 {
