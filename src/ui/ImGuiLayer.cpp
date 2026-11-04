@@ -14,11 +14,15 @@ bool ImGuiLayer::init()
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0)
         return false;
 
+    std::cout << "UI Step Initialize SDL\n";
+
     // OpenGL attributes
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, 0);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+
+    std::cout << "UI Step OpenGL attributes\n";
 
     // Create window
     window = SDL_CreateWindow(
@@ -32,21 +36,31 @@ bool ImGuiLayer::init()
     if (!window)
         return false;
 
+    std::cout << "UI Step Create window\n";
+
     // Create OpenGL context
     glContext = SDL_GL_CreateContext(window);
     SDL_GL_MakeCurrent(window, glContext);
     SDL_GL_SetSwapInterval(1); // vsync
 
+    std::cout << "UI Step Create OpenGL context\n";
+
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
 
+    std::cout << "UI Step Setup Dear ImGui context\n";
+
     // Setup style
     ImGui::StyleColorsDark();
+
+    std::cout << "UI Step Setup style\n";
 
     // Initialize ImGui backends
     ImGui_ImplSDL2_InitForOpenGL(window, glContext);
     ImGui_ImplOpenGL3_Init("#version 150");
+
+    std::cout << "UI Step Initialize ImGui backends\n";
 
     return true;
 }
