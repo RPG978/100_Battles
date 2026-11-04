@@ -15,7 +15,7 @@
 int main()
 {
     try {
-        
+        std::cout << "START\n";
         // Seeds random number generator
         srand(static_cast<unsigned>(time(nullptr)));
 
@@ -26,9 +26,13 @@ int main()
         if (!GameInitializer::initialize(engine, db))
             return 1;
 
+        std::cout << "INIT OK\n";
+
         ImGuiLayer ui;
         if (!ui.init())
             return 1;
+
+        std::cout << "UI OK\n";
 
         UIState uiState = UIState::MainMenu;
         UIRouter router;

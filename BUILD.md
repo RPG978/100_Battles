@@ -271,3 +271,15 @@ Planned improvements:
 - CI documentation
 - Release packaging instructions
 - Automated dependency setup
+
+## Supported Build Environments
+
+Verified:
+
+- Windows 11 + MSVC + vcpkg
+- macOS GitHub Actions
+- Ubuntu 22.04 ARM64 (Raspberry Pi)
+
+Known Linux fixes:
+- Explicitly include <memory> when using std::unique_ptr
+- Avoid temporary Windows-specific headers in cross-platform code
