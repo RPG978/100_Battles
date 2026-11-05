@@ -1,0 +1,35 @@
+# Build directories
+build/
+out/
+Debug/
+x64/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Git
+.git/
+.github/
+
+# Generated binaries
+*.exe
+*.dll
+*.pdb
+*.obj
+*.ilk
+*.lib
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

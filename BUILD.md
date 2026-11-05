@@ -266,7 +266,6 @@ SDL_main
 
 Planned improvements:
 
-- Linux build verification
 - Docker support
 - CI documentation
 - Release packaging instructions
@@ -283,3 +282,28 @@ Verified:
 Known Linux fixes:
 - Explicitly include <memory> when using std::unique_ptr
 - Avoid temporary Windows-specific headers in cross-platform code
+
+Linux ARM build completed successfully.
+
+Running the GUI application from an SSH-only session
+fails with:
+
+SDL_Init failed: No available video device
+
+This is expected because SDL requires a graphical desktop session.
+
+# Docker
+
+Requirements
+
+- Windows 11
+- Docker Desktop
+- WSL2
+
+Run
+
+docker compose up
+
+Build only
+
+docker build -t 100-battles .
