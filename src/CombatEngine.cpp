@@ -5,6 +5,8 @@
 
 void CombatEngine::start(Player& p, Enemy& e)
 {
+    combatResult = CombatResult::InProgress;
+
     playerDead = false;
     enemyDead = false;
     combatOver = false;
@@ -19,11 +21,8 @@ void CombatEngine::start(Player& p, Enemy& e)
         p.recalculateHealth();
 
     // Ensure enemy HP is initialized
-    if (e.max_health <= 0)
-    {
-        e.max_health = e.stats.health;
-        e.current_health = e.stats.health;
-    }
+    e.max_health = e.stats.health;
+    e.current_health = e.stats.health;
 
     playerState.health = p.getCurrentHealth();
     playerState.maxHealth = p.getMaxHealth();
@@ -113,7 +112,9 @@ void CombatEngine::playerAttack(Player& p, Enemy& e) {
 
     if (e.current_health <= 0) {
         std::cout << e.getName() << " has been defeated!\n";
-        awardRewards(p, e);
+        
+        combatResult = CombatResult::Victory;
+        
         enemyDead = true;
         combatOver = true;
         return;
@@ -204,6 +205,9 @@ void CombatEngine::enemyAttack(Player& p, Enemy& e) {
 
     if (p.getCurrentHealth() <= 0) {
         std::cout << p.getName() << " has been defeated!\n";
+        
+        combatResult = CombatResult::Death;
+        
         playerDead = true;
         combatOver = true;
 
@@ -244,6 +248,9 @@ void CombatEngine::tryRun(Player& p, Enemy& e) {
 
     if (roll(1, 100) <= 40) {
         std::cout << p.getName() << " successfully escaped!\n";
+        
+        combatResult = CombatResult::Escape;
+        
         combatOver = true;
     }
     else {
@@ -314,3 +321,7 @@ void CombatEngine::handlePlayerDeath(Player& player)
     lastLostXP = lostXP;
 }
 
+CombatResult CombatEngine::getCombatResult() const
+{
+    return combatResult;
+}

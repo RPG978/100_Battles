@@ -123,18 +123,45 @@ void GameEngine::enterCamp()
     }
 }
 
+void GameEngine::collectRewards(const Enemy& enemy)
+{
+    pendingGold += enemy.rewardGold;
+    pendingXP += enemy.rewardXP;
+
+    std::cout
+        << "[DEBUG] Pending Rewards: "
+        << pendingGold
+        << " gold, "
+        << pendingXP
+        << " xp\n";
+}
+
 void GameEngine::startBattleStreak(int count)
 {
-    streakRemaining = count;   // store this in GameEngine as an int
+    selectedStreakCount = count;
+    streakRemaining = count;
+
+    pendingGold = 0;
+    pendingXP = 0;
+
     state = GameState::Combat;
 
-    // Start first battle
     startCombat();
 }
 
 void GameEngine::startCombat()
 {
     currentEnemy = &enemies.at(roll(1, 20));
+
+    std::cout
+        << "[DEBUG] Enemy selected: "
+        << currentEnemy->getName()
+        << " HP="
+        << currentEnemy->current_health
+        << "/"
+        << currentEnemy->max_health
+        << "\n";
+
     state = GameState::Combat;
 
     combatEngine.start(*player1, *currentEnemy);
@@ -184,35 +211,66 @@ void GameEngine::updateCombat()
     if (!combatEngine.isCombatOver())
         return;
 
-    // Player defeated: streak ends immediately
-    if (combatEngine.playerDied())
+    switch (combatEngine.getCombatResult())
     {
-        std::cout << "[DEBUG] Player died. Ending streak.\n";
-        streakRemaining = 0;
+    case CombatResult::Victory:
 
-        // Capture penalty values from CombatEngine
-        setLastDeathPenalty(combatEngine.getLastLostGold(),
-            combatEngine.getLastLostXP());
+        collectRewards(*currentEnemy);
 
-        // Transition to death summary popup instead of Exploring
-        state = GameState::DeathSummary;
-        uiState = UIState::DeathSummary;
-        return;
-    }
+        if (--streakRemaining > 0)
+        {
+            startCombat();
+        }
+        else
+        {
+            player1->addGold(pendingGold);
+            player1->addXP(pendingXP);
 
-    // Enemy defeated: continue streak if any remain
-    if (--streakRemaining > 0)
-    {
-        std::cout << "[DEBUG] Enemy defeated. Starting next battle.\n";
-        startCombat();
-    }
-    else
-    {
-        std::cout << "[DEBUG] Streak complete. Returning to camp.\n";
+            pendingGold = 0;
+            pendingXP = 0;
+
+            state = GameState::Exploring;
+            enterCamp();
+        }
+
+        break;
+
+    case CombatResult::Escape:
+
+        pendingGold = 0;
+        pendingXP = 0;
+
         state = GameState::Exploring;
         enterCamp();
+
+        break;
+
+    case CombatResult::Death:
+
+        streakRemaining = 0;
+
+        pendingGold = 0;
+        pendingXP = 0;
+
+        setLastDeathPenalty(
+            combatEngine.getLastLostGold(),
+            combatEngine.getLastLostXP());
+
+        state = GameState::DeathSummary;
+        uiState = UIState::DeathSummary;
+
+        break;
+
+    case CombatResult::InProgress:
+    default:
+        break;
     }
+
+    std::cout << "[DEBUG] Combat Result = "
+        << static_cast<int>(combatEngine.getCombatResult())
+        << "\n";
 }
+
 
 StoreRotation GameEngine::generateStoreRotation(int playerLevel)
 {

@@ -84,6 +84,8 @@ public:
     bool purchase(Item* item, int price);
     StoreRotation currentRotation;
 
+    void collectRewards(const Enemy& enemy);
+
 private:
     std::optional<Player> player1;
 
@@ -114,5 +116,9 @@ private:
     int lastLostGold = 0;
     int lastLostXP = 0;
     UIState uiState = UIState::MainMenu;
-    
+
+    int pendingGold = 0;
+    int pendingXP = 0;
+
+    int selectedStreakCount = 0;
 };

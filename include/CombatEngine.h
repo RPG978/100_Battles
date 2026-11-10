@@ -5,8 +5,19 @@
 #include "EnemyAI.h"
 #include <string>
 
+enum class CombatResult
+{
+    InProgress,
+    Victory,
+    Escape,
+    Death
+};
+
 class CombatEngine {
 public:
+    CombatResult combatResult = CombatResult::InProgress;
+    CombatResult getCombatResult() const;
+
     // Initialize combat state
     void start(Player& p, Enemy& e);
     void reset();
