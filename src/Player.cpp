@@ -158,3 +158,13 @@ void Player::deductXP(int amount) {
     xp -= amount;
     if (xp < 0) xp = 0; // clamp so it never goes negative
 }
+
+void Player::incrementBattlesCompleted()
+{
+    battlesCompleted++;
+}
+
+int Player::getBattlesCompleted() const
+{
+    return battlesCompleted;
+}

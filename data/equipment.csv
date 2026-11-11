@@ -78,7 +78,7 @@ id,type,name,base_attack,base_defense,base_health,element,rarity,min_level,max_l
 77,weapon,Lieutenant's Anger Bow,30,0,30,none,4,15,40,An angry bow complete with fury arrows.
 78,weapon,Locke's Lucky Day,0,0,300,none,8,10,30,A deck of cards that seems to have more hearts than spades.
 79,weapon,1000 Needles,100,0,0,poison,10,10,50,A gift from a wandering cactuar.
-80,weapon,Earth Breaker,60,0,0,Earth,5,20,50,A whip that is said to be the favorite toy of an earth titan.
+80,weapon,Earth Breaker,60,0,0,earth,5,20,50,A whip that is said to be the favorite toy of an earth titan.
 81,armor,The Hu's Wineskin,0,80,200,none,10,10,50,A wineskin filled with what can only be described as the most perfect wine.
 82,armor,Skulldivers Deep,25,25,20,"water, poison",4,15,40,Russet armor that possesses your movement.
 83,armor,Reactive Body Armor,0,60,0,none,4,15,40,Body armor that seems to block for you.
@@ -89,3 +89,18 @@ id,type,name,base_attack,base_defense,base_health,element,rarity,min_level,max_l
 88,accessory,Regal Cuffs,10,30,70,none,4,15,40,Wrist gaurds of a fallen king.
 89,accessory,Eliby's Doll,0,15,80,none,4,15,40,A haunted doll belonging to the daughter of a world renowned knight.
 90,accessory,Enhancement Pellet,30,30,30,none,5,20,50,A small pouch of pellets that provide great vigor when eaten.
+91,weapon,Mjolnir,150,100,300,lightning,20,40,999,The hum of electricity fills the air.
+92,weapon,Breath of the Dying,200,50,500,poison,20,40,999,A flail pulled from a limb of Gaia.
+93,weapon,Claw of the Mant,150,150,0,earth,20,40,999,A cresent hook sharp enough to cut a God.
+94,weapon,Hera's Gospel,100,250,600,none,20,40,999,A tome with a life of it's own.
+95,weapon,Diablo's Horn,200,100,150,fire,20,40,999,A horn pulled from the loard of terror
+96,armor,Beidrin's Wreath,0,400,400,earth,20,40,999,An ornamental hood made of ancestral overgrowth.
+97,armor,Bahamut Skin,200,50,0,none,20,40,999,A cloak woven from the skin of the sky dragon.
+98,armor,Phaidra's Protection,0,200,600,water,20,40,999,A floating orb eager to protect.
+99,armor,Luster Armor,50,150,200,none,20,40,999,Armor so dark it absorbs light.
+100,armor,Hate of Mephisto ,100,100,100,lightning,20,40,999,A jacket designed to repel electric flak.
+101,accessory,Tal Rasha's Helix,25,75,50,poison,20,40,999,A gem that allows you to see the future.
+102,accessory,Heart of the Ocean,0,25,250,water,20,40,999,A necklace worth more than the hope diamond
+103,accessory,Faint of Ki,50,50,50,none,20,40,999,Boots that pull energy from the planet's life force.
+104,accessory,Baal's Spirit,150,0,300,poison,20,40,999,A jar containing the spirit of the lord of destruction.
+105,accessory,Terminal Flux,0,0,1500,"fire, poison, water, lightning, earth",30,40,999,An enigma that the mortal mind cannot comprehend.

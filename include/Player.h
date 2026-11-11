@@ -60,6 +60,9 @@ public:
     Armor* getArmor() const { return equippedArmor; }
     Accessory* getAccessory() const { return equippedAccessory; }
 
+    void incrementBattlesCompleted();
+    int getBattlesCompleted() const;
+
 private:
     int id;
     std::string name;
@@ -80,4 +83,5 @@ private:
     int xp;
     int level;
     int unspent_points = 0;
+    int battlesCompleted = 0;
 };

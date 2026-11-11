@@ -9,5 +9,6 @@ enum class UIState
     Camp,
     InGame,
     DeathSummary,
-    DjinnWish
+    DjinnWish,
+    VictorySummary
 };

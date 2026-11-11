@@ -21,7 +21,8 @@ enum class GameState {
     Exploring,
     Camp,
     Combat,
-    DeathSummary
+    DeathSummary,
+    VictorySummary
 };
 
 struct StoreRotation {

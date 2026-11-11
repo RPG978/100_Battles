@@ -6,6 +6,8 @@
 #include "CampUI.h"
 #include "DeathSummaryUI.h"
 #include "imgui.h"
+#include "VictorySummaryUI.h"
+
 
 void UIRouter::draw(GameEngine& engine, UIState& uiState)
 {
@@ -47,10 +49,18 @@ void UIRouter::draw(GameEngine& engine, UIState& uiState)
         {
             uiState = UIState::DeathSummary; // forward to summary
         }
+        else if (engine.getState() == GameState::VictorySummary)
+        {
+            uiState = UIState::VictorySummary; // forward to summary
+        }
         break;
 
     case UIState::DeathSummary:
         DrawDeathSummaryUI(engine, uiState);
+        break;
+
+    case UIState::VictorySummary:
+        DrawVictorySummaryUI(engine, uiState);
         break;
     }
 }

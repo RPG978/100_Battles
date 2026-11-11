@@ -215,6 +215,8 @@ void GameEngine::updateCombat()
     {
     case CombatResult::Victory:
 
+        player1->incrementBattlesCompleted();
+
         collectRewards(*currentEnemy);
 
         if (--streakRemaining > 0)
@@ -223,11 +225,24 @@ void GameEngine::updateCombat()
         }
         else
         {
-            player1->addGold(pendingGold);
-            player1->addXP(pendingXP);
+          
+            player1->addGold(pendingGold * selectedStreakCount);
+            player1->addXP(pendingXP * selectedStreakCount);
 
             pendingGold = 0;
             pendingXP = 0;
+
+            if (selectedStreakCount >= 100) {
+
+                std::cout
+                    << "[DEBUG] Victory check fired. BattlesCompleted="
+                    << player1->getBattlesCompleted()
+                    << "\n";
+
+                state = GameState::VictorySummary;
+                uiState = UIState::VictorySummary;
+                return;
+            }
 
             state = GameState::Exploring;
             enterCamp();
@@ -271,18 +286,21 @@ void GameEngine::updateCombat()
         << "\n";
 }
 
-
 StoreRotation GameEngine::generateStoreRotation(int playerLevel)
 {
     StoreRotation rotation;
 
-    // Filter by level range
     auto filterByLevel = [&](auto& pool) {
         std::vector<Item*> eligible;
+
         for (auto* item : pool) {
-            if (item->min_level <= playerLevel && playerLevel <= item->max_level)
+            if (item->min_level <= playerLevel &&
+                playerLevel <= item->max_level)
+            {
                 eligible.push_back(item);
+            }
         }
+
         return eligible;
         };
 
@@ -290,17 +308,46 @@ StoreRotation GameEngine::generateStoreRotation(int playerLevel)
     auto armorEligible = filterByLevel(armorPool);
     auto accEligible = filterByLevel(accessoryPool);
 
-    // Random pick
-    rotation.weapon = dynamic_cast<Weapon*>(weaponEligible[roll(0, weaponEligible.size() - 1)]);
-    rotation.armor = dynamic_cast<Armor*>(armorEligible[roll(0, armorEligible.size() - 1)]);
-    rotation.accessory = dynamic_cast<Accessory*>(accEligible[roll(0, accEligible.size() - 1)]);
+    if (weaponEligible.empty())
+    {
+        std::cout << "[ERROR] No eligible weapons for level "
+            << playerLevel << "\n";
+        return rotation;
+    }
 
-    // Price assignment
+    if (armorEligible.empty())
+    {
+        std::cout << "[ERROR] No eligible armor for level "
+            << playerLevel << "\n";
+        return rotation;
+    }
+
+    if (accEligible.empty())
+    {
+        std::cout << "[ERROR] No eligible accessories for level "
+            << playerLevel << "\n";
+        return rotation;
+    }
+
+    rotation.weapon =
+        dynamic_cast<Weapon*>(
+            weaponEligible[roll(0, static_cast<int>(weaponEligible.size()) - 1)]);
+
+    rotation.armor =
+        dynamic_cast<Armor*>(
+            armorEligible[roll(0, static_cast<int>(armorEligible.size()) - 1)]);
+
+    rotation.accessory =
+        dynamic_cast<Accessory*>(
+            accEligible[roll(0, static_cast<int>(accEligible.size()) - 1)]);
+
     auto priceFor = [&](Item* item) {
         int basePrice = 20;
         int rarity = std::clamp(item->rarity, 0, 5);
+
         int price = basePrice * (rarity + 1);
-        price += roll(-price / 10, price / 10); // ±10% variance
+        price += roll(-price / 10, price / 10);
+
         return price;
         };
 
