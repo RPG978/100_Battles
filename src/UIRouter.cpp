@@ -7,6 +7,7 @@
 #include "DeathSummaryUI.h"
 #include "imgui.h"
 #include "VictorySummaryUI.h"
+#include "EnemyInfoUI.h"
 
 
 void UIRouter::draw(GameEngine& engine, UIState& uiState)
@@ -38,7 +39,7 @@ void UIRouter::draw(GameEngine& engine, UIState& uiState)
         if (engine.getState() == GameState::Combat)
         {
             DrawCombatUI(engine);
-            DrawDebugUI(engine.getPlayerState(), engine.getEnemyState());
+            DrawEnemyInfoUI(engine);
         }
         else if (engine.getState() == GameState::Exploring)
         {

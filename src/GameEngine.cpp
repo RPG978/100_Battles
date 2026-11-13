@@ -41,6 +41,7 @@ GameEngine::GameEngine(DatabaseManager* db)
 void GameEngine::loadWorld()
 {
     enemies = db->loadEnemies();
+
     items = std::move(db->loadItems());
     
     weaponPool.clear();
@@ -64,17 +65,17 @@ void GameEngine::startNewGame()
 
     warriorRoll = RolledArchetype{
         Archetype::Warrior,
-        Stats{ roll(200,260), roll(20,40), roll(20,30) }
+        Stats{ roll(250,300), roll(35,45), roll(20,30) }
     };
 
     rogueRoll = RolledArchetype{
         Archetype::Rogue,
-        Stats{ roll(140,200), roll(30,50), roll(30,40) }
+        Stats{ roll(200,250), roll(20,30), roll(40,50) }
     };
 
     mageRoll = RolledArchetype{
         Archetype::Mage,
-        Stats{ roll(170,230), roll(40,60), roll(10,20) }
+        Stats{ roll(150,200), roll(55,65), roll(10,20) }
     };
 
     state = GameState::CharacterSelection;
@@ -151,7 +152,37 @@ void GameEngine::startBattleStreak(int count)
 
 void GameEngine::startCombat()
 {
-    currentEnemy = &enemies.at(roll(1, 20));
+    std::vector<Enemy*> eligibleEnemies;
+
+    int playerLevel = player1->getLevel();
+
+
+    // Creates weighted pool based on rarity level
+    for (auto& [id, enemy] : enemies)
+    {
+        if (enemy.getMinLevel() <= playerLevel)
+        {
+            int weight = 6 - enemy.getRarity();
+
+            for (int i = 0; i < weight; i++)
+            {
+                eligibleEnemies.push_back(&enemy);
+            }
+        }
+    }
+
+    if (eligibleEnemies.empty())
+    {
+        std::cout << "[ERROR] No eligible enemies for level "
+            << playerLevel << "\n";
+        return;
+    }
+
+    currentEnemy =
+        eligibleEnemies[
+            roll(0,
+                static_cast<int>(eligibleEnemies.size()) - 1)
+        ];
 
     std::cout
         << "[DEBUG] Enemy selected: "

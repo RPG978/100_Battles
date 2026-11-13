@@ -72,6 +72,29 @@ void DrawCombatUI(GameEngine& engine)
         AddLog("You attempt to run!", ImVec4(1, 0.4f, 0.4f, 1));
     }
 
+    ImGui::Separator();
+
+    ImGui::Text("Next Agro Strike In: %d",
+        3 - player.attacksInRow);
+
+    if (player.attacksInRow == 2)
+    {
+        ImGui::TextColored(
+            ImVec4(1.f, 0.8f, 0.f, 1.f),
+            "Next attack will trigger Agro!");
+    }
+
+    ImGui::Text("Tranquil Progress: %d / 3",
+        player.defendsInRow);
+
+    if (player.isNextAttackTranquil)
+    {
+        ImGui::TextColored(
+            ImVec4(0.4f, 0.7f, 1.f, 1.f),
+            "You are now tranquil.");
+    }
+
+
     ImGui::End();
 
     // === Combat Log Window ===

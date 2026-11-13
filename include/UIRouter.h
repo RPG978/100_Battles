@@ -4,7 +4,6 @@
 #include "UIState.h"
 #include "ui/MainMenuUI.h"
 #include "ui/CombatUI.h"
-#include "ui/DebugUI.h"
 
 class UIRouter {
 public:

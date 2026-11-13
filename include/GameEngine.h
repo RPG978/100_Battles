@@ -87,6 +87,11 @@ public:
 
     void collectRewards(const Enemy& enemy);
 
+    const Enemy* getCurrentEnemy() const
+    {
+        return currentEnemy;
+    }
+
 private:
     std::optional<Player> player1;
 

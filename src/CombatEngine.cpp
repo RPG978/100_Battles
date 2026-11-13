@@ -50,10 +50,12 @@ int CombatEngine::calculateDamage(const Stats& attackerStats,
     bool defenderAgroFlag) {
     float defenseMultiplier = defenderAgroFlag ? 0.5f : 1.0f;
 
-    float dmgMultiplier = std::max(
-        0.0f,
-        1.0f - (defenderDefense * defenseMultiplier) * 0.01f
-    );
+    float effectiveDefense =
+        defenderDefense * defenseMultiplier;
+
+    float dmgMultiplier =
+        static_cast<float>(attackerStats.attack) /
+        (attackerStats.attack + effectiveDefense);
 
     if (defenderDefending) {
         if (defendsInRow == 1) {
@@ -65,6 +67,8 @@ int CombatEngine::calculateDamage(const Stats& attackerStats,
     }
 
     int dmgTotal = roll(attackerStats.attack * 0.9, attackerStats.attack * 1.1) * dmgMultiplier;
+
+    dmgTotal = std::max(1, dmgTotal);
 
     if (attackerAgro) {
         dmgTotal *= 2;
@@ -97,6 +101,7 @@ void CombatEngine::playerAttack(Player& p, Enemy& e) {
     if (playerState.isAgro) {
         std::cout << p.getName() << " unleashes an Agro strike! (x2 damage)\n";
         playerState.isAgro = false;
+        playerState.isNextAttackAgro = false;
     }
 
     std::cout << p.getName() << " attacks " << e.getName()
@@ -188,6 +193,7 @@ void CombatEngine::enemyAttack(Player& p, Enemy& e) {
     if (enemyState.isAgro) {
         std::cout << e.getName() << " unleashes an Agro strike! (x2 damage)\n";
         enemyState.isAgro = false;
+        enemyState.isNextAttackAgro = false;
     }
 
     std::cout << e.getName() << " attacks " << p.getName()
@@ -309,7 +315,13 @@ void CombatEngine::awardRewards(Player& player, const Enemy& enemy) {
 void CombatEngine::handlePlayerDeath(Player& player)
 {
     int lostGold = player.getGold() / 2;
+
     player.spendGold(lostGold);
+
+    if (player.getGold() < 25)
+    {
+        player.setGold(25);
+    }
 
     int lostXP = player.getXP() / 4;
     player.deductXP(lostXP);

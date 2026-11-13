@@ -19,3 +19,83 @@ id,name,base_health,base_attack,base_defense,attack_element,defense_element,coun
 18,Thunder Squirrel,170,30,15,Lightning,Lightning,Lightning,1,1,40
 19,Hot Raccoon,210,30,15,NULL,Fire,Fire,1,1,40
 20,Wet Deer,220,20,15,NULL,Water,NULL,1,1,40
+21,Honed Disease,50,50,100,Poison,Poison,Poison,2,10,50
+22,Dragon Whelp,350,55,30,Fire,Fire,Fire,2,10,50
+23,Water Crescent,300,40,55,Water,Water,Water,2,10,50
+24,Static Shark,350,50,15,Lightning,Water,Lightning,2,10,50
+25,Lumber Folk,450,25,70,Earth,Earth,Earth,2,10,50
+26,Handsome Knight,350,30,30,NULL,NULL,NULL,2,10,50
+27,Bald Tiger,300,40,20,NULL,NULL,NULL,2,10,50
+28,Mad Scientist,250,20,30,Poison,NULL,NULL,2,10,50
+29,A Very Mean Badger ,300,50,5,NULL,Earth,NULL,2,10,50
+30,Beast Toad,400,35,15,Poison,Earth,Poison,2,10,50
+31,Lava Frog,300,40,40,Fire,Fire,Fire,2,10,50
+32,Wave Serpent,350,25,70,Water,Water,Water,2,10,50
+33,Clunky Robot,400,35,60,Lightning,Lightning,Lightning,2,10,50
+34,Gorgeous Elf,350,25,35,Earth,Earth,Earth,2,10,50
+35,Hot Air Balloon,250,5,80,NULL,NULL,Fire,2,10,50
+36,Stinky Elephant,400,30,50,NULL,Earth,Poison,2,10,50
+37,Lesser Vampire,250,50,15,Poison,NULL,NULL,2,10,50
+38,Loud Pterodactyl,200,30,45,NULL,NULL,NULL,2,10,50
+39,Angry Vegetation,400,15,50,Earth,Earth,Earth,2,10,50
+40,15 Small Children,1500,5,5,NULL,NULL,NULL,2,10,50
+41,Toxic Creature,450,50,60,Poison,Poison,Poison,3,20,60
+42,Lesser Dragon,600,60,45,Fire,Fire,Fire,3,20,60
+43,Gemmed Steggusus,550,45,70,Water,Water,Water,3,20,60
+44,Stygian,450,50,25,Lightning,Lightning,Lightning,3,20,60
+45,Unicorn,700,25,80,Earth,Earth,Earth,3,20,60
+46,Wicked Warrior,500,50,50,Fire,Lightning,Earth,3,20,60
+47,Shadow Rogue,500,50,50,Poison,Water,Lightning,3,20,60
+48,Faith Mage,500,50,50,Lightning,Earth,Water,3,20,60
+49,Dizzy Top,150,100,20,Lightning,Lightning,Lightning,3,20,60
+50,Illusionary Wall,1000,20,100,NULL,Water,NULL,3,20,60
+51,Radioactive Bear,550,55,60,Poison,Earth,Poison,3,20,60
+52,Heat Engine,400,70,35,Fire,Fire,Fire,3,20,60
+53,Willowed Fey,350,25,90,Water,Earth,Water,3,20,60
+54,Icathine Prosper,600,30,70,Lightning,Lightning,Lightning,3,20,60
+55,War Carriage,200,70,60,Earth,Earth,Earth,3,20,60
+56,Fester Infantry,250,25,50,Poison,Earth,Earth,3,20,60
+57,Lifeless Soul,350,50,25,NULL,NULL,NULL,3,20,60
+58,Aegis War Hound,600,50,50,Fire,Earth,Fire,3,20,60
+59,Diamond Fighter,150,50,90,NULL,Earth,NULL,3,20,60
+60,Wretched Hag,250,30,35,Poison,Earth,Poison,3,20,60
+61,Bane Sentry,800,90,80,Poison,NULL,Fire,4,30,70
+62,Herald of Flame,750,110,75,Fire,NULL,Fire,4,30,70
+63,Fluid Enigma,950,75,120,Water,Fire,Lightning,4,30,70
+64,Energy Symbios,500,100,120,Lightning,Lightning,Lightning,4,30,70
+65,Earth Breaker,800,110,70,Earth,NULL,Earth,4,30,70
+66,Higher Vampire,850,85,85,NULL,NULL,Poison,4,30,70
+67,Thrash Wurm,1000,100,90,NULL,Earth,NULL,4,30,70
+68,Fathom Beast,950,75,110,NULL,Water,Poison,4,30,70
+69,Reach Angel,850,75,110,NULL,NULL,NULL,4,30,70
+70,Haber Mant,700,55,150,NULL,NULL,Lightning,4,30,70
+71,Magma Raiders,1200,120,45,Fire,Fire,Fire,4,30,70
+72,Tusker the Foul,750,95,100,Poison,Poison,Poison,4,30,70
+73,Ocean Diety,950,80,120,Water,Water,Water,4,30,70
+74,Scorch Tracer,750,110,75,Lightning,Lightning,Lightning,4,30,70
+75,Gaia Knight,1100,75,110,Earth,Earth,Earth,4,30,70
+76,Hate Being,750,85,70,NULL,NULL,NULL,4,30,70
+77,Anguirus,1000,70,100,NULL,NULL,NULL,4,30,70
+78,Fate of Future,1000,100,50,NULL,NULL,NULL,4,30,70
+79,Fate of Prime,1000,50,100,NULL,NULL,NULL,4,30,70
+80,Fate of Principle,1000,75,75,NULL,NULL,NULL,4,30,70
+81,Ifrit,1500,150,150,Fire,Fire,Fire,5,40,999
+82,Leviathan,1500,125,175,Water,Water,Water,5,40,999
+83,Hades,1500,135,160,Poison,Poison,Poison,5,40,999
+84,Zues,1500,180,100,Lightning,Lightning,Lightning,5,40,999
+85,Gaia,1500,100,200,Earth,Earth,Earth,5,40,999
+86,Gammon the Architect,1250,170,130,Lightning,Fire,Water,5,40,999
+87,Helloc the Feared,1150,165,160,Poison,Water,Poison,5,40,999
+88,Entropy the Revered,1950,80,100,NULL,NULL,NULL,5,40,999
+89,Haisis Mortal,950,50,300,NULL,NULL,NULL,5,40,999
+90,Orion,1650,170,120,NULL,NULL,NULL,5,40,999
+91,Winged Sun Dragon,1800,160,100,Fire,Fire,Fire,5,40,999
+92,Hallow Blight Dragon,1600,130,120,Poison,Poison,Poison,5,40,999
+93,Raged Depth Dragon,1750,120,180,Water,Water,Water,5,40,999
+94,Crackling Sky Dragon,1500,200,80,Lightning,Lightning,Lightning,5,40,999
+95,Fertile Scape Dragon,2000,70,200,Earth,Earth,Earth,5,40,999
+96,Osirus Flux,1200,190,100,Lightning,Water,Fire,5,40,999
+97,Idiomyx the Sear,1750,130,150,Water,Water,Lightning,5,40,999
+98,Judge of the Damned,1600,180,150,Earth,Earth,Poison,5,40,999
+99,The Immortal's Leftenant,1500,160,140,NULL,NULL,NULL,5,40,999
+100,Horror Amalgum,1850,125,160,Poison,NULL,Poison,5,40,999

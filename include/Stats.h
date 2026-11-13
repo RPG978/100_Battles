@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+// hp-att-def
 struct Stats {
     int health = 0;
     int attack = 0;
