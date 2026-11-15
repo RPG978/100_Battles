@@ -4,6 +4,7 @@
 #include "CombatState.h"
 #include "EnemyAI.h"
 #include <string>
+#include <vector>
 
 enum class CombatResult
 {
@@ -60,6 +61,19 @@ public:
         enemyAttack(p, e);
         return before - p.getCurrentHealth();
     }
+
+    const std::vector<std::string>& getCombatEvents() const
+    {
+        return combatEvents;
+    }
+
+    void clearCombatEvents()
+    {
+        combatEvents.clear();
+    }
+
+    void addCombatEvent(const std::string& message);
+
 
 #ifdef UNIT_TEST
     CombatState& getMutablePlayerState() { return playerState; }
@@ -143,4 +157,8 @@ private:
     CombatState enemyState;
 
     EnemyAI ai;
+
+    std::vector<std::string> combatEvents;
+
+
 };

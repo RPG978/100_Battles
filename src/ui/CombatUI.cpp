@@ -1,6 +1,7 @@
 #include "CombatUI.h"
 #include "UIState.h"
 #include "imgui.h"
+#include "CombatEngine.h"
 #include <vector>
 
 static std::vector<std::string> logLines;
@@ -12,8 +13,27 @@ static void AddLog(const std::string& text, ImVec4 color = ImVec4(1, 1, 1, 1))
     logColors.push_back(color);
 }
 
+static void ClearLog()
+{
+    logLines.clear();
+    logColors.clear();
+}
+
+void FlushCombatEvents(GameEngine& engine)
+{
+    for (const auto& event : engine.getCombatEvents())
+    {
+        AddLog(
+            event,
+            ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
+    }
+
+    engine.clearCombatEvents();
+}
+
 void DrawCombatUI(GameEngine& engine)
 {
+
     const CombatState& player = engine.getPlayerState();
     const CombatState& enemy = engine.getEnemyState();
 
@@ -41,35 +61,45 @@ void DrawCombatUI(GameEngine& engine)
     // === Action Buttons ===
     if (ImGui::Button("Attack"))
     {
+        ClearLog();
+
         engine.attack();
         engine.updateCombat();
-        AddLog("You attack the enemy!", ImVec4(1.0f, 0.8f, 0.2f, 1));
+
+        FlushCombatEvents(engine);
     }
 
     ImGui::SameLine();
 
     if (ImGui::Button("Defend"))
     {
+        ClearLog();
+
         engine.defend();
         engine.updateCombat();
-        AddLog("You defend!", ImVec4(0.4f, 0.7f, 1, 1));
+
+        FlushCombatEvents(engine);
     }
 
     if (ImGui::Button("Use Item"))
     {
+        ClearLog();
+
         // Placeholder — later open an inventory window
         engine.useItem("potion");
         engine.updateCombat();
-        AddLog("You use an item.", ImVec4(0.6f, 1, 0.6f, 1));
+        FlushCombatEvents(engine);
     }
 
     ImGui::SameLine();
 
     if (ImGui::Button("Run"))
     {
+        ClearLog();
+
         engine.tryRun();
         engine.updateCombat();
-        AddLog("You attempt to run!", ImVec4(1, 0.4f, 0.4f, 1));
+        FlushCombatEvents(engine);
     }
 
     ImGui::Separator();

@@ -413,3 +413,13 @@ void GameEngine::insertCustomItem(int attack, int defense, int rarity, bool fire
     std::string sql = "INSERT INTO items (attack, defense, rarity, fire, ice) VALUES (?, ?, ?, ?, ?);";
     // Use sqlite3_bind_* to insert values
 }
+
+const std::vector<std::string>& GameEngine::getCombatEvents() const
+{
+    return combatEngine.getCombatEvents();
+}
+
+void GameEngine::clearCombatEvents()
+{
+    combatEngine.clearCombatEvents();
+}

@@ -92,6 +92,9 @@ public:
         return currentEnemy;
     }
 
+    const std::vector<std::string>& getCombatEvents() const;
+    void clearCombatEvents();
+
 private:
     std::optional<Player> player1;
 

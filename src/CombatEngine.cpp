@@ -2,6 +2,8 @@
 #include "Random.h"
 #include <algorithm>
 #include <iostream>
+#include <vector>
+#include <sstream>
 
 void CombatEngine::start(Player& p, Enemy& e)
 {
@@ -82,6 +84,8 @@ void CombatEngine::playerAttack(Player& p, Enemy& e) {
 
     updateCombatState(playerState, true, false);
 
+    addCombatEvent("You attack!");
+
     if (playerState.isNextAttackTranquil) {
         std::cout << p.getName() << " is tranquil and cannot act!\n";
         playerState.isNextAttackTranquil = false;
@@ -104,8 +108,16 @@ void CombatEngine::playerAttack(Player& p, Enemy& e) {
         playerState.isNextAttackAgro = false;
     }
 
-    std::cout << p.getName() << " attacks " << e.getName()
-        << " for " << dmgTotal << "\n";
+    std::stringstream ss;
+
+    ss << p.getName()
+        << " attacks "
+        << e.getName()
+        << " for "
+        << dmgTotal
+        << " damage.";
+
+    addCombatEvent(ss.str());
 
     e.current_health -= dmgTotal;
     if (e.current_health < 0) e.current_health = 0;
@@ -132,6 +144,8 @@ void CombatEngine::playerAttack(Player& p, Enemy& e) {
 
 void CombatEngine::playerDefend(Player& p, Enemy& e) {
     if (combatOver) return;
+
+    addCombatEvent("You defend!");
 
     // Tranquil: player loses their turn
     if (playerState.isNextAttackTranquil) {
@@ -174,6 +188,9 @@ void CombatEngine::enemyAttack(Player& p, Enemy& e) {
 
     updateCombatState(enemyState, true, false);
 
+    addCombatEvent(
+        e.getName() + " attacks!");
+
     if (enemyState.isNextAttackTranquil) {
         std::cout << e.getName() << " is tranquil and cannot act!\n";
         enemyState.isNextAttackTranquil = false;
@@ -196,8 +213,16 @@ void CombatEngine::enemyAttack(Player& p, Enemy& e) {
         enemyState.isNextAttackAgro = false;
     }
 
-    std::cout << e.getName() << " attacks " << p.getName()
-        << " for " << dmgTotal << "\n";
+    std::stringstream ss;
+
+    ss << e.getName()
+        << " attacks "
+        << p.getName()
+        << " for "
+        << dmgTotal
+        << " damage.";
+
+    addCombatEvent(ss.str());
 
     p.setCurrentHealth(p.getCurrentHealth() - dmgTotal);
     if (p.getCurrentHealth() < 0) p.setCurrentHealth(0);
@@ -228,7 +253,8 @@ void CombatEngine::enemyAttack(Player& p, Enemy& e) {
 void CombatEngine::enemyDefend(Player& p, Enemy& e) {
     if (combatOver) return;
 
-    std::cout << e.getName() << " braces for impact!\n>>";
+    addCombatEvent(
+        e.getName() + " defends!");
 
     // Update streaks (enemy defended)
     updateCombatState(enemyState, false, true);
@@ -253,14 +279,16 @@ void CombatEngine::tryRun(Player& p, Enemy& e) {
     if (combatOver) return;
 
     if (roll(1, 100) <= 40) {
-        std::cout << p.getName() << " successfully escaped!\n";
-        
+        addCombatEvent(
+            p.getName() + " successfully escaped!");
+
         combatResult = CombatResult::Escape;
-        
         combatOver = true;
     }
     else {
-        std::cout << p.getName() << " failed to escape!\n";
+        addCombatEvent(
+            p.getName() + " failed to escape!");
+
         enemyTurn(p, e);
     }
 
@@ -269,9 +297,20 @@ void CombatEngine::tryRun(Player& p, Enemy& e) {
     enemyState.health = e.current_health;
 }
 
-void CombatEngine::useItem(Player& p, const std::string& item) {
-    std::cout << p.getName() << " tries to use " << item << "...\n";
-    std::cout << "But items aren't implemented yet.\n";
+void CombatEngine::useItem(Player& p,
+    const std::string& item)
+{
+    std::stringstream ss;
+
+    ss << p.getName()
+        << " tries to use "
+        << item
+        << "...";
+
+    addCombatEvent(ss.str());
+
+    addCombatEvent(
+        "But items aren't implemented yet.");
 }
 
 void CombatEngine::updateCombatState(CombatState& state, bool didAttack, bool didDefend) {
@@ -336,4 +375,11 @@ void CombatEngine::handlePlayerDeath(Player& player)
 CombatResult CombatEngine::getCombatResult() const
 {
     return combatResult;
+}
+
+void CombatEngine::addCombatEvent(const std::string& message)
+{
+    combatEvents.push_back(message);
+
+    std::cout << message << '\n';
 }
