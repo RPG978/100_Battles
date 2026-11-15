@@ -1,106 +1,191 @@
 id,type,name,base_attack,base_defense,base_health,element,rarity,min_level,max_level,description
-1,weapon,Rusty Sword,5,0,0,none,1,1,10,A worn blade with minimal cutting power.
-2,weapon,Iron Blade,12,0,0,none,2,1,10,Standard issue iron sword.
-3,weapon,Flame Dagger,10,0,0,fire,2,1,10,A dagger imbued with minor fire energy.
-4,weapon,Thunder Axe,18,0,0,lightning,2,5,20,A heavy axe crackling with electricity.
-5,weapon,Frost Greatsword,22,0,0,ice,2,5,20,A massive blade that chills the air.
-6,armor,Cloth Tunic,0,4,0,none,1,1,10,Simple cloth armor offering minimal protection.
-7,armor,Leather Vest,0,9,0,none,1,1,10,Sturdy leather armor favored by scouts.
-8,armor,Iron Plate,0,16,0,none,2,5,20,Heavy iron armor for frontline fighters.
-9,armor,Fireguard Armor,0,14,0,fire,2,5,20,Armor resistant to fire damage.
-10,armor,Glacial Mail,0,20,0,ice,2,5,20,Armor forged in frozen caverns.
-11,accessory,Wooden Charm,0,3,10,earth,1,1,10,A simple charm that boosts vitality.
-12,accessory,Agile Band,1,1,10,none,1,1,10,Increases agility and reaction speed.
-13,accessory,Flame Ring,0,0,30,fire,2,5,10,A ring that enhances fire affinity.
-14,accessory,Storm Pendant,0,0,30,lightning,2,5,20,A pendant humming with static energy.
-15,accessory,Frost Amulet,0,0,30,ice,2,5,20,An amulet that strengthens ice abilities.
-16,weapon,Kendo Shinai,3,3,3,none,1,1,10,A stick for practicing Kendo.
-17,weapon,Heavy Oar,3,5,0,none,1,1,10,An oar from a standard row boat.
-18,weapon,Practice Wand,2,3,10,none,1,1,10,A sliver of elm ment to be a magic conduit.
-19,weapon,Nail Bat,5,7,0,none,1,1,10,A baseball bat with a single protruding nail.
-20,weapon,Shillelagh,7,6,10,earth,2,5,20,A club left behind by druids of old.
-21,armor,Peasants Cloths,0,2,0,none,1,1,10,Tattered cloths for working in the field.
-22,armor,Fancy Garbs,0,3,10,none,2,1,10,Noble person's dressware.
-23,armor,Moldy Gambeson,0,7,0,earth,2,1,10,Well-used padded armor with a powerful odor.
-24,armor,Scale Armor,0,15,0,water,2,5,20,Lightweight armor made from the scales of a large fish.
-25,armor,Laboratory Coat,0,2,20,poison,2,5,20,A long jacket meant to ward off toxic chemicals.
-26,accessory,Snorkle,0,0,10,water,1,1,10,A mask and piece of bamboo meant to help breathe underwater.
-27,accessory,Health Band,0,0,30,poison,2,5,20,A wrist band indicating you are a patient of good health.
-28,accessory,Crown of Thorns,2,3,30,earth,2,5,20,A crown made of petrified thistles.
-29,accessory,Power Wrist,5,0,10,none,2,1,10,A wristband for training.
-30,accessory,Sweatband,0,5,10,none,2,1,10,A sweatband for training.
-31,weapon,Bone Knife,16,0,0,poison,2,5,10,A dagger carved from the bones of a poisonous creature.
-32,weapon,Buster Sword,20,5,10,none,2,5,20,An unwieldy weapon that looks sweet when you triple combo.
-33,weapon,Mage Staff,10,10,40,none,2,5,20,A stave carved from an ancient oak.
-34,weapon,Pike,15,10,10,none,2,5,20,A weapon carried by the town guard.
-35,weapon,Enchanted Bagpipes,10,20,50,none,3,10,30,Bagpipes enhanced by a magical aura.
-36,armor,Static Pelt,0,13,10,lightning,2,5,20,A skin made of Thunder Squirrel
-37,armor,Hauberk,0,20,0,none,2,5,20,A nicely woven and light chain mail.
-38,armor,Wool Sweater,0,5,0,none,1,1,10,A nice sweater that reminds you of home.
-39,armor,Burlap Sack,0,2,0,none,1,1,10,We can't all afford nice things.
-40,armor,Giant Tortoise Carapace,0,35,0,none,3,10,30,Armor crafted from the shell of a long lived tortoise.
-41,accessory,Chain Necklace,0,0,10,none,1,1,10,A pretty standard necklace chain.
-42,accessory,Rabbits Foot,0,2,10,none,1,1,10,Some people say it brings good luck.
-43,accessory,Power Glove,10,0,0,none,2,5,20,It's soooo bad…
-44,accessory,Cool Shades,0,0,30,none,2,5,20,Don't wear at night.
-45,accessory,White Cape,0,0,60,none,3,10,30,Some may mistake you for a super hero.
-46,weapon,Flametounge ,35,0,0,fire,4,15,40,A longsword imbued with Ifrit's rage.
-47,weapon,Sub-Zero Shurikens,35,0,0,ice,4,15,40,Shurikens that seem to shiver themselves.
-48,weapon,Gavel of the Wood,35,0,0,earth,4,15,40,A warhammer with the weight of a tree.
-49,weapon,Riptide Sickles,35,0,0,water,4,15,40,A pair of sickles that can split a raging river.
-50,weapon,Thunder Bombs,35,0,0,lightning,4,15,40,Heavy bombs that explode with arching lightning.
-51,armor,Shell of the Fire Dragon,0,50,0,fire,4,15,40,Armor crafted from the hide of a fire dragon.
-52,armor,Shell of the Ice Dragon,0,50,0,ice,4,15,40,Armor crafted from the hide of an ice dragon.
-53,armor,Shell of the Earth Dragon,0,50,0,earth,4,15,40,Armor crafted from the hide of an earth dragon.
-54,armor,Shell of the Sea Dragon,0,50,0,water,4,15,40,Armor crafted from the hide of a water dragon.
-55,armor,Shell of the Sky Dragon,0,50,0,lightning,4,15,40,Armor crafted from the hide of a lightning dragon.
-56,accessory,Fire Crown,0,0,100,fire,4,15,40,A crown pulsating with fire.
-57,accessory,Ice Crown,0,0,100,ice,4,15,40,A crown pulsating with frost.
-58,accessory,Earth Crown,0,0,100,earth,4,15,40,A crown pulsating with vigor.
-59,accessory,Water Crown,0,0,100,water,4,15,40,A crown pulsating with fury.
-60,accessory,Lightning Crown,0,0,100,lightning,4,15,40,A crown pulsating with lightning.
-61,weapon,Legendary Kunai,25,10,20,none,3,10,30,Dropped by an honorable Hokage.
-62,weapon,Heafty Gemmed Axe,30,0,10,none,3,10,30,An axe perhaps not as sharp as it is heavy.
-63,weapon,Long Ranged Harpoon,25,5,30,none,3,10,30,A harpoon that can cover twice the distance of an average spear.
-64,weapon,Indestructable Caltrops,5,30,0,none,3,10,30,Nails used to slow an approaching enemy.
-65,weapon,Corporeal Benediction,40,0,100,poison,5,20,50,A rotten-looking scythe that is lighter than it appears.
-66,armor,Bone Cage,0,30,15,poison,3,10,30,Armor made from the tempered bones of a dead dragon.
-67,armor,Brigandine,0,30,0,none,3,10,30,Leather protection with scattered metal plates.
-68,armor,Plackart,0,25,10,none,3,10,30,A plate for belly protection.
-69,armor,Cuirass,5,30,0,none,3,10,30,A heavy shell made for intense battle.
-70,armor,Splint Mail,5,25,10,none,3,10,30,A lighter battle armor that boosts morale.
-71,accessory,Hearty Pendant,0,0,100,none,3,10,30,Fine jewlery that seems to have a life of it's own.
-72,accessory,Cunning Buckle,10,5,75,none,3,10,30,A belt buckle that emanates a battle beat.
-73,accessory,Magic Earrings,5,10,75,none,3,10,30,Enchanted bobbles that dangle from your ears.
-74,accessory,Platinum Bangle,15,0,75,none,3,10,30,An arm plate crafted by elder dwarves enscribed with battle signs.
-75,accessory,Vintage Timepiece,0,15,75,none,3,10,30,An antique treasure lovingly tended to throughout the years.
-76,weapon,Shindo's Exploding Dagger,25,25,20,"fire, poison",4,15,40,An ancient wight had a propensody toward pyrotechnics while forging this steel.
-77,weapon,Lieutenant's Anger Bow,30,0,30,none,4,15,40,An angry bow complete with fury arrows.
-78,weapon,Locke's Lucky Day,0,0,300,none,8,10,30,A deck of cards that seems to have more hearts than spades.
-79,weapon,1000 Needles,100,0,0,poison,10,10,50,A gift from a wandering cactuar.
-80,weapon,Earth Breaker,60,0,0,earth,5,20,50,A whip that is said to be the favorite toy of an earth titan.
-81,armor,The Hu's Wineskin,0,80,200,none,10,10,50,A wineskin filled with what can only be described as the most perfect wine.
-82,armor,Skulldivers Deep,25,25,20,"water, poison",4,15,40,Russet armor that possesses your movement.
-83,armor,Reactive Body Armor,0,60,0,none,4,15,40,Body armor that seems to block for you.
-84,armor,The Barbed Coffin,20,60,0,none,5,20,50,A heavy set of ancient armor surrounded in sharp barbs.
-85,armor,Hesitence Direct,0,60,100,earth,5,20,50,A tunic made of enchanted reeds.
-86,accessory,The Secret Flute,0,100,0,none,10,10,50,Perhaps your defense could use a good dance?
-87,accessory,Tiara of Life,0,0,500,none,10,10,50,A glowing tiara encrusted with the gems of life.
-88,accessory,Regal Cuffs,10,30,70,none,4,15,40,Wrist gaurds of a fallen king.
-89,accessory,Eliby's Doll,0,15,80,none,4,15,40,A haunted doll belonging to the daughter of a world renowned knight.
-90,accessory,Enhancement Pellet,30,30,30,none,5,20,50,A small pouch of pellets that provide great vigor when eaten.
-91,weapon,Mjolnir,150,100,300,lightning,20,40,999,The hum of electricity fills the air.
-92,weapon,Breath of the Dying,200,50,500,poison,20,40,999,A flail pulled from a limb of Gaia.
-93,weapon,Claw of the Mant,150,150,0,earth,20,40,999,A cresent hook sharp enough to cut a God.
-94,weapon,Hera's Gospel,100,250,600,none,20,40,999,A tome with a life of it's own.
-95,weapon,Diablo's Horn,200,100,150,fire,20,40,999,A horn pulled from the loard of terror
-96,armor,Beidrin's Wreath,0,400,400,earth,20,40,999,An ornamental hood made of ancestral overgrowth.
-97,armor,Bahamut Skin,200,50,0,none,20,40,999,A cloak woven from the skin of the sky dragon.
-98,armor,Phaidra's Protection,0,200,600,water,20,40,999,A floating orb eager to protect.
-99,armor,Luster Armor,50,150,200,none,20,40,999,Armor so dark it absorbs light.
-100,armor,Hate of Mephisto ,100,100,100,lightning,20,40,999,A jacket designed to repel electric flak.
-101,accessory,Tal Rasha's Helix,25,75,50,poison,20,40,999,A gem that allows you to see the future.
-102,accessory,Heart of the Ocean,0,25,250,water,20,40,999,A necklace worth more than the hope diamond
-103,accessory,Faint of Ki,50,50,50,none,20,40,999,Boots that pull energy from the planet's life force.
-104,accessory,Baal's Spirit,150,0,300,poison,20,40,999,A jar containing the spirit of the lord of destruction.
-105,accessory,Terminal Flux,0,0,1500,"fire, poison, water, lightning, earth",30,40,999,An enigma that the mortal mind cannot comprehend.
+1,weapon,Rusty Sword,5,3,0,none,1,1,30,A worn blade with minimal cutting power.
+2,weapon,Iron Blade,10,0,0,none,2,1,30,Standard issue iron sword.
+3,weapon,Flame Dagger,8,2,0,fire,2,1,30,A dagger imbued with minor fire energy.
+4,weapon,Thunder Axe,18,4,0,lightning,2,5,35,A heavy axe crackling with electricity.
+5,weapon,Frost Greatsword,22,0,0,water,2,5,35,A massive blade that chills the air.
+6,armor,Cloth Tunic,0,4,15,none,1,1,30,Simple cloth armor offering minimal protection.
+7,armor,Leather Vest,0,8,5,none,1,1,30,Sturdy leather armor favored by scouts.
+8,armor,Iron Plate,0,16,20,none,2,5,35,Heavy iron armor for frontline fighters.
+9,armor,Great Helm,0,14,0,none,2,5,35,A crusaders best friend
+10,armor,Sallet,0,20,10,water,2,5,35,A heavy dome cap.
+11,accessory,Wooden Charm,0,5,10,earth,1,1,30,A simple charm that boosts vitality.
+12,accessory,Agile Band,3,3,10,none,1,1,30,Increases agility and reaction speed.
+13,accessory,Eye Patch,7,0,30,fire,2,5,35,An eye patch of a former pirate's crewhand.
+14,accessory,Badge of Honor,5,5,30,lightning,2,5,35,A patch received for answering the call of duty.
+15,accessory,Acrylic Charm,0,7,30,none,2,5,35,A momento from a childhood friend.
+16,weapon,Kendo Shinai,3,3,10,none,1,1,30,A stick for practicing Kendo.
+17,weapon,Heavy Oar,4,6,0,none,1,1,30,An oar from a standard row boat.
+18,weapon,Practice Wand,2,3,15,none,1,1,30,A sliver of elm ment to be a magic conduit.
+19,weapon,Nail Bat,6,4,0,none,1,1,30,A baseball bat with a single protruding nail.
+20,weapon,Shillelagh,7,6,35,earth,2,5,35,A club left behind by druids of old.
+21,armor,Peasants Cloths,0,3,10,none,1,1,30,Tattered cloths for working in the field.
+22,armor,Fancy Garbs,0,5,15,none,2,1,30,Noble person's dressware.
+23,armor,Moldy Gambeson,0,7,0,earth,2,1,30,Well-used padded armor with a powerful odor.
+24,armor,Scale Armor,0,15,20,water,2,5,35,Lightweight armor made from the scales of a large fish.
+25,armor,Laboratory Coat,0,2,60,poison,2,5,35,A long jacket meant to ward off toxic chemicals.
+26,accessory,Snorkle,0,1,25,water,1,1,30,A mask and piece of bamboo meant to help breathe underwater.
+27,accessory,Health Band,0,0,75,poison,2,5,35,A wrist band indicating you are a patient of good health.
+28,accessory,Crown of Thorns,2,3,45,earth,2,5,35,A crown made of petrified thistles.
+29,accessory,Power Wrist,10,0,0,none,2,1,30,A wristband for training.
+30,accessory,Sweatband,0,5,15,none,2,1,30,A sweatband for training.
+31,weapon,Bone Knife,19,0,15,poison,2,5,35,A dagger carved from the bones of a poisonous creature.
+32,weapon,Buster Sword,20,4,5,none,2,5,35,An unwieldy weapon that looks sweet when you triple combo.
+33,weapon,Mage Staff,8,8,35,none,2,5,35,A stave carved from an ancient oak.
+34,weapon,Pike,13,8,10,none,2,5,35,A weapon carried by the town guard.
+35,weapon,Enchanted Bagpipes,5,15,45,none,3,10,40,Bagpipes enhanced by a magical aura.
+36,armor,Static Pelt,0,17,20,lightning,2,5,35,A skin made of Thunder Squirrel
+37,armor,Hauberk,0,20,0,none,2,5,35,A nicely woven and light chain mail.
+38,armor,Wool Sweater,0,5,15,none,1,1,30,A nice sweater that reminds you of home.
+39,armor,Burlap Sack,0,2,5,none,1,1,30,We can't all afford nice things.
+40,armor,Giant Tortoise Carapace,0,30,15,none,3,10,40,Armor crafted from the shell of a long lived tortoise.
+41,accessory,Chain Necklace,0,3,20,none,1,1,30,A pretty standard necklace chain.
+42,accessory,Rabbits Foot,1,0,25,none,1,1,30,Some people say it brings good luck.
+43,accessory,Power Glove,25,0,0,none,2,5,35,It's soooo bad…
+44,accessory,Cool Shades,0,5,45,none,2,5,35,Don't wear at night.
+45,accessory,White Cape,0,5,90,none,3,10,40,Some may mistake you for a super hero.
+46,weapon,Flametounge ,50,0,0,fire,4,15,45,A longsword imbued with Ifrit's rage.
+47,weapon,Sub-Zero Shurikens,50,0,0,water,4,15,45,Shurikens that seem to shiver themselves.
+48,weapon,Gavel of the Wood,50,0,0,earth,4,15,45,A warhammer with the weight of a tree.
+49,weapon,Riptide Sickles,50,0,0,water,4,15,45,A pair of sickles that can split a raging river.
+50,weapon,Thunder Bombs,50,0,0,lightning,4,15,45,Heavy bombs that explode with arching lightning.
+51,armor,Fire Plate,0,50,0,fire,4,15,45,Armor crafted from the hide of a fire beast.
+52,armor,Ice Plate,0,50,0,water,4,15,45,Armor crafted from the hide of an ice beast.
+53,armor,Earth Plate,0,50,0,earth,4,15,45,Armor crafted from the hide of an earth beast.
+54,armor,Water Plate,0,50,0,water,4,15,45,Armor crafted from the hide of a water beast.
+55,armor,Sky Plate,0,50,0,lightning,4,15,45,Armor crafted from the hide of a lightning beast.
+56,accessory,Fire Crown,0,0,150,fire,4,15,45,A crown pulsating with fire.
+57,accessory,Ice Crown,0,0,150,water,4,15,45,A crown pulsating with frost.
+58,accessory,Earth Crown,0,0,150,earth,4,15,45,A crown pulsating with vigor.
+59,accessory,Water Crown,0,0,150,water,4,15,45,A crown pulsating with fury.
+60,accessory,Lightning Crown,0,0,150,lightning,4,15,45,A crown pulsating with lightning.
+61,weapon,Sharpshooters Rifle,35,0,0,none,3,10,40,A Snipers only tool.
+62,weapon,Heafty Gemmed Axe,30,0,15,none,3,10,40,An axe perhaps not as sharp as it is heavy.
+63,weapon,Long Ranged Harpoon,25,0,30,none,3,10,40,A harpoon that can cover twice the distance of an average spear.
+64,weapon,Indestructable Caltrops,5,30,0,none,3,10,40,Nails used to slow an approaching enemy.
+65,weapon,Unbreakable Parasol,35,40,0,none,5,20,50,Looks to be an umbrella embedded with retractable spikes.
+66,armor,Bone Cage,0,30,15,poison,3,10,40,Armor made from the tempered bones of a dead dragon.
+67,armor,Brigandine,0,30,0,none,3,10,40,Leather protection with scattered metal plates.
+68,armor,Plackart,0,25,30,none,3,10,40,A plate for belly protection.
+69,armor,Cuirass,5,30,0,none,3,10,40,A heavy shell made for intense battle.
+70,armor,Splint Mail,5,25,15,none,3,10,40,A lighter battle armor that boosts morale.
+71,accessory,Hearty Pendant,0,0,105,none,3,10,40,Fine jewlery that seems to have a life of it's own.
+72,accessory,Cunning Buckle,10,5,60,none,3,10,40,A belt buckle that emanates a battle beat.
+73,accessory,Magic Earrings,5,10,60,none,3,10,40,Enchanted bobbles that dangle from your ears.
+74,accessory,Platinum Bangle,15,0,60,none,3,10,40,An arm plate crafted by elder dwarves enscribed with battle signs.
+75,accessory,Vintage Timepiece,0,15,60,none,3,10,40,An antique treasure lovingly tended to throughout the years.
+76,weapon,Shindo's Exploding Dagger,25,25,0,"fire, poison",4,15,40,An ancient wight had a propensody toward pyrotechnics while forging this steel.
+77,weapon,Lieutenant's Anger Bow,30,0,60,none,4,15,40,An angry bow complete with fury arrows.
+78,weapon,Locke's Lucky Day,0,0,300,none,10,20,60,A deck of cards that seems to have more hearts than spades.
+79,weapon,1000 Needles,100,0,0,none,10,20,60,A gift from a wandering cactuar.
+80,weapon,Earth Breaker,75,0,0,earth,5,20,60,A whip that is said to be the favorite toy of an earth titan.
+81,armor,The Hu's Wineskin,0,60,120,none,10,25,55,A wineskin filled with what can only be described as the most perfect wine.
+82,armor,Skulldivers Deep,20,20,20,"water, poison",4,15,40,Russet armor that possesses your movement.
+83,armor,Reactive Body Armor,0,50,0,none,4,15,40,Body armor that seems to block for you.
+84,armor,The Barbed Coffin,10,55,15,none,5,20,60,A heavy set of ancient armor surrounded in sharp barbs.
+85,armor,Hesitence Direct,0,60,45,earth,5,20,60,A tunic made of enchanted reeds.
+86,accessory,The Secret Flute,0,100,0,none,10,25,55,Perhaps your defense could use a good dance?
+87,accessory,Tiara of Life,0,0,300,none,10,25,55,A glowing tiara encrusted with the gems of life.
+88,accessory,Regal Cuffs,10,30,30,none,4,15,40,Wrist gaurds of a fallen king.
+89,accessory,Eliby's Doll,0,15,105,none,4,15,40,A haunted doll belonging to the daughter of a world renowned knight.
+90,accessory,Enhancement Pellet,30,30,45,none,5,20,60,A small pouch of pellets that provide great vigor when eaten.
+91,weapon,Mjolnir,250,150,600,lightning,20,60,999,The hum of electricity fills the air.
+92,weapon,Breath of the Dying,300,50,750,poison,20,60,999,A flail pulled from a limb of Gaia.
+93,weapon,Claw of the Mant,250,200,100,earth,20,60,999,A cresent hook sharp enough to cut a God.
+94,weapon,Hera's Gospel,150,250,600,water,20,60,999,A tome with a life of it's own.
+95,weapon,Diablo's Horn,500,100,0,fire,20,60,999,A horn pulled from the loard of terror
+96,armor,Beidrin's Wreath,0,400,600,earth,20,60,999,An ornamental hood made of ancestral overgrowth.
+97,armor,Bahamut Skin,400,100,300,none,20,60,999,A cloak woven from the skin of the sky dragon.
+98,armor,Phaidra's Protection,0,200,1200,water,20,60,999,A floating orb eager to protect.
+99,armor,Luster Armor,100,300,600,none,20,60,999,Armor so dark it absorbs light.
+100,armor,Hate of Mephisto ,250,250,250,lightning,20,60,999,A jacket designed to repel electric flak.
+101,accessory,Tal Rasha's Helix,125,175,900,poison,20,60,999,A gem that allows you to see the future.
+102,accessory,Heart of the Ocean,0,250,1050,water,20,60,999,A necklace worth more than the hope diamond
+103,accessory,Faint of Ki,200,200,600,none,20,60,999,Boots that pull energy from the planet's life force.
+104,accessory,Baal's Spirit,500,0,300,poison,20,60,999,A jar containing the spirit of the lord of destruction.
+105,accessory,Terminal Flux,0,0,1800,"fire, poison, water, lightning, earth",30,60,999,An enigma that the mortal mind cannot comprehend.
+106,weapon,Salt Whip,60,0,45,none,5,20,60,A whip intended to cause maximum suffering.
+107,weapon,Conch Trident,25,40,30,water,5,20,60,A trident that is perpetually wet.
+108,weapon,Charged Disc,35,15,75,lightning,5,20,60,An olypian discus that levitates.
+109,armor,Torment Rack,15,60,0,poison,5,20,60,Armor of bones tied together by mummified sinews.
+110,armor,Tegulated plate,0,75,0,none,5,20,60,Hardened ancient armor almost too heavy to carry.
+111,armor,Wavewaist Scarf,25,35,45,water,5,20,60,A hip scarf that grows as you move.
+112,accessory,Tempered Knuckles,55,20,0,none,5,20,60,Knuckles hard as mythril but as flexible as cloth.
+113,accessory,Dimmie's Fortune Dice,0,20,165,none,5,20,60,Bet it all.
+114,accessory,Phase Bracers,20,50,15,none,5,20,60,Temporal cuffs that appear to leave existance while in battle.
+115,accessory,Kung Fu Anklet,60,10,15,none,5,20,60,Training accessory from a great martial arts expert.
+116,weapon,Parade Stake,75,25,0,none,6,25,80,A pike used to showcase the head of a corrupt politician.
+117,weapon,Hostile Blade,80,10,30,fire,6,25,80,A scimitar engulfed in flames.
+118,weapon,Wave Blade,30,50,60,water,6,25,80,A short sword that appears to move even when still.
+119,weapon,Thunder Blade,75,0,75,lightning,6,25,80,A sword with two blades that arc electricty between them.
+120,weapon,Grass Blade,50,30,60,earth,6,25,80,A blade of grass.
+121,armor,Fireguard Armor,20,60,60,fire,6,25,80,Armor resistant to fire damage.
+122,armor,Glacial Mail,0,60,120,water,6,25,80,Armor forged in frozen caverns.
+123,armor,Sparkling Plate,40,40,60,lightning,6,25,80,Armor created using a bolt of lightning.
+124,armor,Stone Spaulders,0,70,90,earth,6,25,80,Stone shoulders that repel most steel weapons.
+125,armor,Death Boots,30,30,120,poison,6,25,80,Boots that wrap the legs in a veil of decay.
+126,accessory,Flame Ring,60,30,30,fire,6,25,80,A ring that enhances fire affinity.
+127,accessory,Storm Pendant,80,10,30,lightning,6,25,80,A pendant humming with static energy.
+128,accessory,Frost Amulet,20,60,60,water,6,25,80,An amulet that strengthens ice abilities.
+129,accessory,Chain of Roses,0,40,240,earth,6,25,80,A necklace forged from enchanted roses.
+130,accessory,Foul Bandana,25,25,150,poison,6,25,80,A neckerchief made from the skin of a slave.
+131,weapon,Executioners Axe,100,0,150,none,7,30,100,An Axe larger than the average warrior.
+132,weapon,Warlocks Stave,70,30,150,"fire, water, earth, lightning, poison",7,30,100,An elemental staff that dominates all.
+133,weapon,Legendary Kunai,60,40,150,none,7,30,100,Dropped by an honorable Hokage.
+134,weapon,Versatile Cannon,100,0,150,none,7,30,100,A cannon that can be compacted for quick movement.
+135,weapon,Corporeal Benediction,80,0,210,poison,7,30,100,A rotten-looking scythe that is lighter than it appears.
+136,armor,Holy Vest,0,100,150,none,7,30,100,A glimmering vest that radiates white magic.
+137,armor,Trunk of the Ancient Wood,0,150,0,earth,7,30,100,Armor crafted from petrified wood of ancient origin.
+138,armor,Spikes of Hell,40,110,0,none,7,30,100,A spiked shield meant to damage attackers.
+139,armor,Gait Spirit,70,70,30,none,7,30,100,A rotating soul that repels attacks and foes.
+140,armor,Gore Wurm Hide,0,120,90,none,7,30,100,Wurm pelt crafted into featherweight armor
+141,accessory,Fitsy Guise,15,45,270,none,7,30,100,A fancy mask that changes your appearance with your thoughts.
+142,accessory,Power Amp,150,0,0,none,7,30,100,A pin that invigorates your melee combat.
+143,accessory,Tough Amp,0,150,0,none,7,30,100,A pin that turns your skin into armor.
+144,accessory,Life Amp,0,0,450,none,7,30,100,A pin that fills your soul with joie de vivre.
+145,accessory,Monkey's Paw,50,50,150,none,7,30,100,A fist of a monkey with two fingers extended.
+146,weapon,Dimensional Crossbow,125,25,150,lightning,8,35,110,A crossbow that shoots across dimensions.
+147,weapon,Atomic Lance,125,50,75,fire,8,35,110,A lance that can melt metal.
+148,weapon,Tidal Vorpal,25,150,75,water,8,35,110,A curved edge with the blade on the wrong side.
+149,weapon,Acre Vein ,85,60,165,earth,8,35,110,Invisible chains that drag the earth to the surface to do your bidding.
+150,weapon,Mace of the Damned,75,75,150,poison,8,35,110,A spiked skull on a staff made of demon bones.
+151,armor,Mirror Gauntlets,0,200,0,none,8,35,110,Bounces attacks in every direction away from you.
+152,armor,Shroud of Malice,35,100,195,poison,8,35,110,Woven cloak made of nightmares.
+153,armor,Sunspot Circlet,55,100,135,fire,8,35,110,A halo that burns with the intensity of the sun.
+154,armor,Flash Armor,45,80,225,lightning,8,35,110,Comes to life with otherworldly energy once equipped.
+155,armor,Torrent Sash,15,125,180,water,8,35,110,Ties you outfit together while allowing you to walk through walls.
+156,accessory,Mox Black,65,65,210,poison,8,35,110,A black stone pulsating with a deadly aura.
+157,accessory,Mox White,90,40,210,lightning,8,35,110,A white stone pulsating with an aura or energy.
+158,accessory,Mox Red,85,55,180,fire,8,35,110,A red stone pulsating with a burning aura.
+159,accessory,Mox Blue,20,100,240,water,8,35,110,A blue stone pulsating with a magical aura.
+160,accessory,Mox Green,0,130,210,earth,8,35,110,A green stone pulsating with an invigorating aura.
+161,weapon,"Polaris, the Katar of the Thief",225,0,225,none,9,40,130,The Thief's weapon of choice when they robbed the vault of heaven.
+162,weapon,Hatebreak Hammer,180,80,120,none,9,40,130,Used to destroy the crystal barrier seperating the planes of evil.
+163,weapon,Thunder Stroke Javelins,250,0,150,lightning,9,40,130,Believed to be the source of all lighting strikes.
+164,weapon,Ali Jerico's Royal Scepter,120,100,240,none,9,40,130,Gifted to a mortal by a trickster deity.
+165,weapon,Phage Tessen,100,100,300,poison,9,40,130,A fighting fan beloved by the daughter of the Lich King.
+166,armor,Greaves of Rapture,60,120,360,none,9,40,130,War boots adorned by God's holy army.
+167,armor,Spectre Ward,0,250,150,"fire, water, earth, lightning, poison",9,40,130,A shield that protects from all elements.
+168,armor,Casque of the Immortal,0,150,450,none,9,40,130,A helm that grants life to fallen warriors only when worn.
+169,armor,Grip of the Titans,75,175,150,earth,9,40,130,Mitts the grant the strength of the Titans.
+170,armor,Coat of Arms,60,120,60,none,9,40,130,Armor that sprouts corporeal arms.
+171,accessory,The Southern Star,20,100,540,none,9,40,130,An amulet believed to have bled life into the ocean at the dawn of time.
+172,accessory,Winds of Future's Gone,80,100,360,none,9,40,130,A shawl that whispers the wishes of the departed.
+173,accessory,The Garthok's Bell,0,0,900,none,9,40,130,A device used to narfle the Garthok.
+174,accessory,Collar of Penance,80,150,210,none,9,40,130,Beg for forgivness.
+175,accessory,Sleeves of Madness,0,200,300,none,9,40,130,"Ties together your arms, but controls weapons for you."
+176,weapon,Spade Ultima,250,100,150,none,10,50,150,Ornate hatchet of the Mystic Traveler.
+177,weapon,Launch Epitome,200,100,300,none,10,50,150,Summon projectiles out of a worm hole from another world.
+178,weapon,Blackard's Gammon,100,100,600,none,10,50,150,Tokens of minature war pieces that animate and devour enemies.
+179,weapon,Agate Ajar,75,250,375,none,10,50,150,A timepiece used to capture souls.
+180,weapon,Fatal Jeice,400,0,0,none,10,50,150,A battering ram used to break open the gates of hell.
+181,armor,Shell of the Fire Dragon,0,400,0,fire,10,50,150,Armor crafted from the hide of a fire dragon.
+182,armor,Shell of the Ice Dragon,0,400,0,water,10,50,150,Armor crafted from the hide of an ice dragon.
+183,armor,Shell of the Earth Dragon,0,400,0,earth,10,50,150,Armor crafted from the hide of an earth dragon.
+184,armor,Shell of the Sea Dragon,0,400,0,water,10,50,150,Armor crafted from the hide of a water dragon.
+185,armor,Shell of the Sky Dragon,0,400,0,lightning,10,50,150,Armor crafted from the hide of a lightning dragon.
+186,accessory,Demon War Paint,250,150,0,none,10,50,150,War paint that envelopes a fighter with demon aura.
+187,accessory,Hellvetic Visor,100,200,300,none,10,50,150,A rimmed hat that shields a user from utmost evil.
+188,accessory,Gaia's Bracelet,50,250,300,earth,10,50,150,A bracelet craved from the limbs of Gaia.
+189,accessory,Resin of the Singularity ,250,0,450,fire,10,50,150,An apoxy used to coat anything in a dimensional layer of wax.
+190,accessory,Shackles of the Thunder God,200,100,300,lightning,10,50,150,Handcuffs made of the truest elemental lightning.
